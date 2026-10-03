@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "Flamlink",
+    "slug": "flamlink",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": { "image": "./assets/splash-icon.png", "resizeMode": "contain", "backgroundColor": "#0E2230" },
+    "android": {
+      "package": "cm.flamlink.driver",
+      "adaptiveIcon": { "foregroundImage": "./assets/adaptive-icon.png", "backgroundColor": "#102F3F" },
+      "permissions": ["CAMERA", "ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION", "VIBRATE"]
+    },
+    "ios": { "bundleIdentifier": "cm.flamlink.driver", "supportsTablet": false },
+    "web": { "favicon": "./assets/favicon.png" },
+    "plugins": [
+      ["expo-camera", { "cameraPermission": "Flamlink uses the camera to scan gas cylinder barcodes." }],
+      ["expo-location", { "locationWhenInUsePermission": "Flamlink shares your position so the nearest truck can be sent to depots running low." }],
+      "expo-secure-store"
+    ],
+    "extra": { "apiUrl": "http://10.0.2.2:4000" }
+  }
+}

@@ -1,0 +1,29 @@
+// The Flamlink mark: a gas cylinder topped by a blue flame, with a chain link on its body.
+export function Mark({ size = 36 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 1024 1024" aria-hidden="true">
+      <defs>
+        <linearGradient id="lm-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#14384A" /><stop offset="1" stopColor="#091820" /></linearGradient>
+        <linearGradient id="lm-fl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#6FD3FF" /><stop offset="1" stopColor="#1F7AE0" /></linearGradient>
+        <linearGradient id="lm-bd" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor="#C9DAE6" /><stop offset=".45" stopColor="#fff" /><stop offset="1" stopColor="#B9CCDA" /></linearGradient>
+      </defs>
+      <rect width="1024" height="1024" rx="230" fill="url(#lm-bg)" />
+      <path d="M512 96C566 170 610 214 610 262C610 300 566 330 512 330C458 330 414 300 414 262C414 214 462 180 512 96Z" fill="url(#lm-fl)" />
+      <path d="M512 200C536 236 556 254 556 276C556 296 536 310 512 310C488 310 468 296 468 276C468 254 490 236 512 200Z" fill="#E9F8FF" />
+      <rect x="462" y="330" width="100" height="22" rx="11" fill="#8FA3B2" />
+      <rect x="492" y="346" width="40" height="40" fill="#8FA3B2" />
+      <rect x="446" y="378" width="132" height="44" rx="14" fill="#D9A93F" />
+      <path d="M352 520C352 452 420 412 512 412C604 412 672 452 672 520L672 826Q672 864 634 864L390 864Q352 864 352 826Z" fill="url(#lm-bd)" />
+      <rect x="398" y="612" width="150" height="104" rx="52" fill="none" stroke="#1F7AE0" strokeWidth="24" />
+      <rect x="476" y="612" width="150" height="104" rx="52" fill="none" stroke="#0E2230" strokeWidth="24" />
+    </svg>
+  );
+}
+export function Logo({ light }) {
+  return (
+    <div className="logo">
+      <Mark size={38} />
+      <span className="logo-word" style={light ? { color: '#fff' } : undefined}>Flamlink</span>
+    </div>
+  );
+}
